@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> IMDB using html and css</title>
+    <style>
+        body{
+	width: 1000px;
+	margin: 0 auto;
+	font-family: Roboto;
+	background-color: #dfdfdf;
+	font-weight: 400;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imdblogo{
+	width: 60px;
+	padding-right: 20px;
+}
+
+button .fa-search{
+	outline: none;
+	border: none;
+}
+
+.header{
+	background-color: #444340;
+	padding: 20px 20px;
+}
+
+#content{
+	display: flex;
+}
+#main{
+	width: 68%;
+	background-color: white;
+	padding: 20px 20px;
+	border-right: 1.5px solid grey;
+}
+
+#side{
+	width: 32%;
+	background-color: #f1f1f1;
+	padding: 20px 20px;
+	border-left: 1.5px solid grey;
+}
+
+#two{
+	padding: -20px -20px;
+	background-color: #2e2c20;
+}
+
+.footer{
+	padding: 20px 20px;
+	background-color: #f1f1f1;
+}
+.txt{
+	vertical-align: top;
+	padding: 10px;
+}
+button{
+	height: 30px;
+	width: 50px;
+	background-color: #eac407;
+	vertical-align: top;
+}
+
+.all:hover{
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+h2:hover{
+	color: rgba(65, 104, 198, 0.8);
+	text-decoration: underline rgba(65, 104, 198, 0.8);
+	cursor: pointer;
+}
+
+.effect:hover{
+	color: rgba(65, 104, 198, 0.8);
+	text-decoration: underline rgba(65, 104, 198, 0.8);
+	cursor: pointer;
+}
+
+.imdbpro{
+    width: 60px;
+    padding-right: 20px;
+}
+
+.img{
+	width:195px;
+}
+.img1{
+	margin-right:auto;
+    width: 195px;
+}
+h2{
+	color: #55575b;
+	font-weight: 500;
+}
+h3{
+	color: #55575b;
+	font-weight: 500;
+}
+#help{
+	color: white;
+	display: inline;
+	font-size: 18px;
+    margin-bottom:100px;
+    padding: 20px;;
+}
+
+.fa{
+	color: #f1f1f1;
+}
+#button{
+	color: black;
+	background-color: #eac407;
+}
+
+.hovered{
+	color: rgb(7,46,186);
+}
+.hovered:hover{
+	text-decoration: underline rgb(7,46,186);
+	cursor: pointer;
+}
+
+.p1{
+	display: inline;
+	font-size: 18px;
+	font-family:'Abril Fatface';
+	padding:0 10px;
+	color:#eac407(7,46,186);
+}
+
+.inline{
+	display: inline;
+}
+
+.border1{
+	border-right: 2px solid #f1f1f1;
+}
+.p2{
+	font-size: 12px;
+}
+
+.img3{
+	width:auto;
+}
+
+.img4{
+	width:auto;
+}
+.img5{
+	margin-right:auto;
+}
+
+#part3{
+	padding: 0 20px 100px 20px;
+}
+
+#part4{
+	font-size: 15px;
+}
+
+.icons{
+	background-color: blue;
+}
+
+.border2{
+	padding: 20px 0;
+	border-bottom: 1px solid #636870;
+}
+.last{
+	padding-right: 20px;
+}
+
+.select{
+	width: 100px;
+	height: 50px;
+	color: white;
+	background-color: black;
+	vertical-align: top;
+}
+
+.fa-plus-circle{
+	color: grey;
+}
+
+.xs{
+	font-size: 13px;
+	color: #626262;
+}
+
+#ad{
+	font-size: 10px;
+	text-align: center;
+}
+
+.imgs{
+	width: 30px;
+	height: 40px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.side0{
+	background-color:black;
+	font-size: 13px;
+	color: white;
+}
+
+.side0 h3{
+	color:#eac407;
+	font-size: 15px;
+}
+
+ #hover{
+	text-decoration: underline white;
+	cursor: pointer;
+}
+
+.percent{
+	padding-right: 40px;
+	padding-left: 10px;
+}
+
+.percent:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.three{
+    background-color:black;
+}
+
+#main {
+    background-color: black;
+    color: white;
+}
+#side {
+    background-color: black;
+    color:#eac407;
+}
+#nav{
+    display: inline;
+    color: #dfdfdf;
+    padding: 10px;
+    margin-top:15px 15px;
+}
+        </style>
+    <title>My imdb</title>
+    
+</head>
+<body>
+
+<div class="header">
+<span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/1200px-IMDB_Logo_2016.svg.png" class="imdblogo"></span>
+
+<input type="text" class="txt"placeholder="Find Movies, TV shows,Celebrities and more..." style="width:400px; padding:5px">
+
+<select style="width:100px;padding:5px" class="all txt">
+    <option>All</option>
+    <option>Titles</option>
+    <option>TV Episodes</option>
+    <option>Names</option>
+    <option>Companies</option>
+    <option>Keywords</option>
+    <option>Characters</option>
+    <option>Quotes</option>
+    <option>Bios</option>
+    <option>Plots</option>
+    <option>Advanced Search »</option>
+</select>
+
+    <button><i class="fa fa-search"  id="button" aria-hidden="true"></i></button>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6p2lpudRKkCRqfhoGB-JMCvKn_lBjk7ho7g&usqp=CAU" class="imdbpro txt">
+
+   <p id="nav">help</p>
+   <p id="nav">watchlist</p>
+   <p id="nav">signin</p>
+    
+</div>
+
+<div id="content">
+<div id="main">
+<div id="two" >
+<img src="c:\Users\santh\Downloads\download (51).jpeg" class="img img1" >
+<img src="c:\Users\santh\Downloads\download (52).jpeg" class="img img2">
+<img src="c:\Users\santh\Downloads\download (53).jpeg" class="img">
+</div>
+ 
+<div class="three">
+    <h2 style="color: #eac407;">A history at the boxoffice!</h2>
+    <p>SRK's Jawan made a huge collections at the worldwide boxoffice and made a tamilian director atlee a grand entry into the world of bollywood</p>
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (4).jpeg" class="img3" style="margin-right:10px width: 195px;">
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\images.jpeg" class="img3" >
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\images (1).jpeg" class="img3" >
+
+    <p class="hovered">See the entire list »<p>
+</div>
+
+<hr>
+
+<div class="four">
+    <h2 style="color: #eac407;"> 10 on IMDb this week</h2>
+
+    <p class="inline">frances sterngharn <p class="hovered inline" >kate mckinnon </p>returns to  <p class="hovered inline">saturday night show</p>, <p class="hovered inline">Daniel</p>, Rupert, and more have changed since <em class="hovered" >Harry Potter and the Sorcerer's Stone</em> first took fans into <p class="hovered inline">J.K. Rowling</p>'s wizarding world.</p>
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (9).jpeg"class="img img1">
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (10).jpeg"class="img img1">
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (11).jpeg"class="img ">
+
+    <p class="hovered">View the gallery »</p>
+</div>
+
+<hr>
+
+<div class="five">
+    <h2 style="color: #eac407;"> Heights Tackles Wrongful Conviction</h2>
+
+    <p class="hovered inline">Lakeith Stanfield</p> and <p class="hovered inline">Nnamdi Asomugha</p> star in <em class="hovered">Crown Heights</em>, the true story of a man wrongly convicted of murder and the best friend who devotes his life to proving his innocence.</p>
+
+    <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwMjY2NTEwMF5BMl5BanBnXkFtZTgwMDc3ODA5MjI@._V1_SX170_CR0,0,170,250_AL_.jpg" class="img3" style="margin-right:10px; width:170px; height:250px">
+
+    <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZDE2YzY4ODMtOTJlOS00ZTUyLTlmMDAtZDQ5NTdjNGNmYTA5XkEyXkFqcGdeQXVyNTMyNjkwMw@@._V1_SY250_CR0,0,444,250_AL_.jpg" class="img3" style="width:420px; height:250px">
+
+    <p class="hovered">Watch the video »</p>
+
+</div>
+
+<hr>
+
+<div class="six">
+    <h2 style="color: #eac407;"> to watch </h2>
+    <p>top pics for tv shows and movies just for you</p>
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (5).jpeg" class="img img1">
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (6).jpeg" class="img img1">
+
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (8).jpeg" class="img">
+
+    <p class="hovered">See the full gallery »</p>
+</div>
+
+<div class="seven">
+    <h2 class="inline" style="color: #eac407;">featured today</h2>
+    <p class="p1">|see the list</p>
+
+    <p><img src="c:\Users\santh\Downloads\imdb\assets\images\download.jpeg"class="img4 img5">
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (53).jpeg"class="img4 img5">
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (1).jpeg" class="img4 img5">
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (2).jpeg" class="img4 img5">
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (3).jpeg" class="img4"></p>
+
+    <p class="inline">Top 10 stars of indian cinema!!! <p class="hovered" style="display:inline">here</p> after voting.</p>
+    <p class="hovered">Vote now »</p>
+</div>
+</div>
+
+<div id="side">
+    <img src="c:\Users\santh\Downloads\imdb\assets\images\download (63).jpeg">
+    <div id="ad" class="hovered">ad feedback</div>
+    <hr>
+
+    <div class="side0">
+        <h3 style="font-size:20px; padding:10px 20px">Trending Indian Movies and Shows</h3>
+        <p style="padding:2px 20px">Real-time popularity on IMDb (05.41.22 India Standard Time)</p>
+        <p style="padding-left:150px;font-size:10px">% OF TOP 10 PAGE VIEWS</p>
+
+        <table>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\52995669765_db43ebeb09_c.jpg" class="imgs"></td>
+                <td>#1</td>
+                <td class="percent 3rd">Leo</td>
+                <td >53.8%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\AAAAQcEvt-ScHqP6AW-t9APZcNuRsY-0_7-TNGWX821jQ2zuAf1oANHrJKev9tkz8H4s91CY5IsvUu9YVof4QQx1vWH9u0Yavs_q-4nQKIL3h42Uer8X_R3ImlZH7OMApYEgHHUuZhLQwUqE7QQ2r3_utOAH.jpg" class="imgs"></td>
+                <td>#2</td>
+                <td class="percent 3rd">Squid game challenge </td>
+                <td >8.9%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (54).jpeg" class="imgs"></td>
+                <td>#3</td>
+                <td class="percent 3rd">scam2003</td>
+                <td >25.6%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (55).jpeg" class="imgs"></td>
+                <td>#4</td>
+                <td class="percent 3rd">The railwaymen</td>
+                <td >12.5%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (56).jpeg" class="imgs"></td>
+                <td>#5</td>
+                <td class="percent 3rd">jersey</td>
+                <td >77.1%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (57).jpeg" class="imgs"></td>
+                <td>#6</td>
+                <td class="percent 3rd">Joe</td>
+                <td >55.5%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (58).jpeg" class="imgs"></td>
+                <td>#7</td>
+                <td class="percent 3rd">Dhuruva natchathiram</td>
+                <td >6.75%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (59).jpeg" class="imgs"></td>
+                <td>#8</td>
+                <td class="percent 3rd">Thunivu</td>
+                <td >3%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (60).jpeg" class="imgs"></td>
+                <td>#9</td>
+                <td class="percent 3rd">Mark antony</td>
+                <td >43.1%</td>
+            </tr>
+            <tr>
+                <td><img src="c:\Users\santh\Downloads\imdb\assets\images\download (61).jpeg" class="imgs"></td>
+                <td>#10</td>
+                <td class="percent 3rd">captain miller</td>
+                <td >12.33</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="side1">
+        <h3 style="color: #eac407;"> India Charts</h3>
+        <div class="hovered">Top Rated Indian Movies</div>
+        <div class="hovered">Top Rated Malayalam Movies</div>
+        <div class="hovered">Top Rated Tamil Movies</div>
+        <div class="hovered">Top Rated Telugu Movies</div>
+    </div>
+
+    <hr>
+
+    <div class="side2">
+        <h3 class="effect" style="color: #eac407;">Now Playing(Box Office)</h3>
+        <table>
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered"> The hunger games</div><div class="xs">$11.3M</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered"> Napolean</div><div class="xs">$8.6M</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered"> Wish</div><div class="xs">$25M</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered"> trolls band together</div><div class="xs">$8.8M</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered">thanks giving</div><div class="xs">$1M</div></td>
+            </tr>
+        </table>	
+
+        <p class="hovered">See more box office results »</p>
+    </div>
+
+    <hr>
+
+    <div class="side3">
+        <h3 class="effect" style="color: #eac407;">Coming Soon</h3>
+        <table>
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered">rise of the footsole</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered">rennaisance</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered"> ragging grace</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered">Animal</div></td>
+            </tr>
+
+            <tr>
+                <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
+                <td><div class="hovered">silentnight</div></td>
+            </tr>
+        </table>
+
+        <p class="hovered">See more coming soon »</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3 style="color: #eac407;">India Spotlight</h3>
+
+        <img src="c:\Users\santh\Downloads\imdb\assets\images\download (62).jpeg">
+        <div style="color:white">top rated and trending movies, celebrity interviews, quizzes, and the best in Indian entertainment on IMDb.</div>
+<p class="hovered">Check out India Spotlight »</p>
+    </div>
+    <hr>
+</div>
+</div>
+</body>
+</html> 
