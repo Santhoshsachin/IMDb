@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../assets/registration.css">
+    <script>
+      function validateform() {
+        var x = document.forms["myform"]["name"].value;
+if (x == "" || x == null) {
+  alert("Names must be filled out");
+  return false;}  
+        var x = document.forms["myform"]["email"].value;
+if (x == "" || x == null) {
+  alert("Email must be filled out");
+  return false;}
+  var x = document.forms["myform"]["password"].value;
+if (x == "" || x == null) {
+  alert("Password must be filled out");
+  return false;}
+  var x = document.forms["myform"]["repassword"].value;
+if (x == "" || x == null) {
+  alert("Re-Enter Password must be filled out");
+  return false;}
+ 
+}
+</script>
+
+</head>
+<body>
+  <section>
+    <div class="logo">
+      <img src="https://m.media-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png" alt="">
+      <span></span>
+    </div>
+    <div class="card">
+      <h1>Create Account</h1><br>
+      <div class="form">
+        <form name="myform" method="post" onsubmit="return validateform()" >
+        <label for="name">Your name</label>
+        <input type="text" id="name" placeholder="First and last name" name="name"><br>
+        <label for="num">Email</label><br>
+
+
+
+        <input type="email" id="num" name="email" placeholder="Email"   style="width:270px;"><br>
+   
+        <br>
+        <label for="pass">Password</label>
+        <input type="Password" name="password" id="pass" placeholder="At least 8 characters"><br>
+        <img src="../assets/images/info.png" alt="note" id="info"><p id="inf">Passwords must be at least 8 characters.</p>
+        <label for="pass">Re-enter Password</label>
+        <input type="Password" name="repassword" id="pass"><br>
+        <a href="../index.html"><button id="buton" style="background-color: rgb(235, 235, 91);border-radius: 5px;">Create your IMDb Account</button></a> </form> 
+      </div>
+    
+      <div>
+      	<p id="acc">Already have an account? <a href="../pages/signin.html" class="ic">Sign in </a> </p>
+      </div>
+  </section>
+</body>
+<footer>
+      <div class="links">
+        <a href="#">Terms and Privacy Notice</a>
+        <a href="#">Send us feedback</a>
+        <a href="#">Help</a>
+      </div>
+      <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+</html>
